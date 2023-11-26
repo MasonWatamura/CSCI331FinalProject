@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/main.css">
+    
+</head>
+<body>
+    <div id="header">
+        <a href=""><button>Calculator</button></a>
+        <a href="https://www.desmos.com/calculator"><button>Graphing Calc</button></a>
+        <a href="https://www.desmos.com/scientific"><button>Scientific Calc</button></a>
+        <a href="https://www.google.com"><button>Google</button></a>
+        <a href="https://www.bing.com"><button>Bing</button></a>
+    </div>
+
+    <picture>
+        <source media="(max-width: 600px)" srcset="images/machine640w.jpg" />
+        <source media="(min-width: 600px)" srcset="images/machine1280w.jpg" />
+        <img src="images/machine640w.jpg" alt="Calculator" />
+      </picture>
+
+    <div id="input">
+        <input type="number" id="n1">
+        <p id="symbol"></p>
+        <input type="number" id="n2">
+        <p id="equal">=</p>
+        <p id="out"></p> 
+    </div>
+
+    <div id="operations">
+        <button id="add">+</button>
+        <button id="sub">&minus;</button>
+        <button id="mult">&times;</button>
+        <button id="divide">&divide;</button>
+        <button id="great">&GreaterEqual;</button>
+        <button id="less">≤</button>
+    </div>
+</body>
+</html>

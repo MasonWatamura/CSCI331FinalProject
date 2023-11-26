@@ -1,0 +1,110 @@
+$fontsize: 2em;
+$buttonfontsize: 4em;
+$buttonsize: 2.5em;
+
+@function divideByTwo($value) {
+    @return $value/2
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header a {
+    width: 100%;
+}
+
+#header button {
+    width: inherit;
+
+}
+
+#input {
+    width: fit-content;
+    margin: 8px;
+    text-align: end;
+}
+
+#input input {
+    font-size: $fontsize;
+    text-align: end;
+}
+
+#input p {
+    display: block;
+    font-size: $fontsize;
+    margin: .25em;
+}
+
+#symbol {
+    text-align: start;
+}
+
+#equal {
+    content-visibility: hidden;
+}
+
+#operations {
+    display: grid;
+    grid: auto auto auto / auto auto;
+    justify-content: start;
+    margin: 8px;
+}
+
+#operations button{
+    background-color: orange;
+    color:white;
+    border-radius: 50%;
+    font-size: $buttonfontsize;
+    width:$buttonsize;
+    height:$buttonsize;
+    margin: 10px;
+}
+
+#great, #less {
+    visibility: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    #header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #input input {
+        font-size: divideByTwo($fontsize);
+    }
+
+    #input p{
+        display: inline;
+        font-size: divideByTwo($fontsize);
+    }
+
+    #operations {
+        display: grid;
+        grid: auto / auto auto auto auto auto auto;
+    }
+
+    #operations button{
+        /* border-radius: 50%; */
+        font-size: divideByTwo($buttonfontsize);
+        width:divideByTwo($buttonsize);
+        height:divideByTwo($buttonsize);
+        margin: 10px;
+    }
+
+    #great, #less {
+        visibility: visible;
+    }
+}
