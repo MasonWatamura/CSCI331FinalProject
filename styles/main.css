@@ -8,11 +8,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 #header a {
   width: 100%;
 }
-
 #header button {
   width: inherit;
 }
@@ -23,12 +21,10 @@ body {
   margin: 8px;
   text-align: end;
 }
-
 #input input {
   font-size: 2em;
   text-align: end;
 }
-
 #input p {
   display: block;
   font-size: 2em;
@@ -49,7 +45,6 @@ body {
   justify-content: start;
   margin: 8px;
 }
-
 #operations button {
   background-color: orange;
   color: white;

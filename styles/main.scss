@@ -15,33 +15,49 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    a {
+        width: 100%;
+    }
+
+    button {
+        width: inherit;
+    }
 }
 
-#header a {
-    width: 100%;
-}
-
-#header button {
-    width: inherit;
-
-}
+// #header a {
+//     width: 100%;
+// }
+// #header button {
+//     width: inherit;
+// }
 
 #input {
     width: fit-content;
     margin: 8px;
     text-align: end;
+
+    input {
+        font-size: $fontsize;
+        text-align: end;
+    }
+
+    p {
+        display: block;
+        font-size: $fontsize;
+        margin: .25em;
+    }
 }
 
-#input input {
-    font-size: $fontsize;
-    text-align: end;
-}
-
-#input p {
-    display: block;
-    font-size: $fontsize;
-    margin: .25em;
-}
+// #input input {
+//     font-size: $fontsize;
+//     text-align: end;
+// }
+// #input p {
+//     display: block;
+//     font-size: $fontsize;
+//     margin: .25em;
+// }
 
 #symbol {
     text-align: start;
@@ -56,17 +72,33 @@ body {
     grid: auto auto auto / auto auto;
     justify-content: start;
     margin: 8px;
+
+    button {
+        background-color: orange;
+        color:white;
+        border-radius: 50%;
+        font-size: $buttonfontsize;
+        width:$buttonsize;
+        height:$buttonsize;
+        margin: 10px;
+    }
 }
 
-#operations button{
-    background-color: orange;
-    color:white;
-    border-radius: 50%;
-    font-size: $buttonfontsize;
-    width:$buttonsize;
-    height:$buttonsize;
-    margin: 10px;
-}
+// #operations {
+//     display: grid;
+//     grid: auto auto auto / auto auto;
+//     justify-content: start;
+//     margin: 8px;
+// }
+// #operations button{
+//     background-color: orange;
+//     color:white;
+//     border-radius: 50%;
+//     font-size: $buttonfontsize;
+//     width:$buttonsize;
+//     height:$buttonsize;
+//     margin: 10px;
+// }
 
 #great, #less {
     visibility: hidden;
@@ -82,27 +114,48 @@ img {
         flex-direction: row;
     }
 
-    #input input {
-        font-size: divideByTwo($fontsize);
-    }
+    #input {
+        input {
+            font-size: divideByTwo($fontsize);
+        }
 
-    #input p{
-        display: inline;
-        font-size: divideByTwo($fontsize);
+        p {
+            display: inline;
+            font-size: divideByTwo($fontsize);
+        }
     }
+    // #input input{
+    //     font-size: divideByTwo($fontsize);
+    // }
+    // #input p{
+    //     display: inline;
+    //     font-size: divideByTwo($fontsize);
+    // }
 
     #operations {
         display: grid;
         grid: auto / auto auto auto auto auto auto;
+
+        button {
+            /* border-radius: 50%; */
+            font-size: divideByTwo($buttonfontsize);
+            width:divideByTwo($buttonsize);
+            height:divideByTwo($buttonsize);
+            margin: 10px;
+        }
     }
 
-    #operations button{
-        /* border-radius: 50%; */
-        font-size: divideByTwo($buttonfontsize);
-        width:divideByTwo($buttonsize);
-        height:divideByTwo($buttonsize);
-        margin: 10px;
-    }
+    // #operations {
+    //     display: grid;
+    //     grid: auto / auto auto auto auto auto auto;
+    // }
+    // #operations button{
+    //     /* border-radius: 50%; */
+    //     font-size: divideByTwo($buttonfontsize);
+    //     width:divideByTwo($buttonsize);
+    //     height:divideByTwo($buttonsize);
+    //     margin: 10px;
+    // }
 
     #great, #less {
         visibility: visible;
