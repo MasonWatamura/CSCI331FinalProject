@@ -6,6 +6,16 @@ $buttonsize: 2.5em;
     @return $value/2
 }
 
+@mixin button-style($bg-color, $color) {
+    background-color: $bg-color;
+    color: $color;
+    border-radius: 50%;
+    font-size: $buttonfontsize;
+    width:$buttonsize;
+    height:$buttonsize;
+    margin: 10px;
+}
+
 @each $name in 'add' 'sub' 'mult'{
     ##{$name}{
         background-color: orange;
@@ -20,13 +30,14 @@ $buttonsize: 2.5em;
 
 @each $name in 'divide' 'great' 'less'{
     ##{$name}{
-        background-color: orange;
-        color:white;
-        border-radius: 50%;
-        font-size: $buttonfontsize;
-        width:$buttonsize;
-        height:$buttonsize;
-        margin: 10px;
+        @include button-style(orange, white);
+        // background-color: orange;
+        // color:white;
+        // border-radius: 50%;
+        // font-size: $buttonfontsize;
+        // width:$buttonsize;
+        // height:$buttonsize;
+        // margin: 10px;
     }
 }
 
